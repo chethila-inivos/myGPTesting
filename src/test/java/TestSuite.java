@@ -92,6 +92,9 @@ public class TestSuite extends BaseTest {
         Thread.sleep(3000);
         HtmlElementEvents.clickButton("/html/body/app-root/app-gp-jobs-advertise/div/div/div[1]/div/div/div/div/div[2]/div/button[2]");
         Thread.sleep(2000);
+        String actual=driver.findElement(By.xpath("//*[@id=\"mat-dialog-title-0\"]")).getText();
+        Thread.sleep(2000);
+        Assert.assertEquals(actual,"Thanks! Your ad is now live!");
 //        String actual=driver.findElement(By.xpath("//*[@id=\"mat-dialog-title-0\"]")).getText();
 //        System.out.println(actual);
 //        Assert.assertEquals(actual,"Thanks! Your ad is now live!");
